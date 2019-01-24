@@ -16,7 +16,7 @@ class SeleniumCBT(unittest.TestCase):
         self.testId = None
         caps = {}
         caps['record_video'] = 'true'
-        caps['browser_api_name'] = os.environ['CBT_BROWSERS']
+        caps['browser_api_name'] = os.environ['CBT_BROWSER']
         caps['os_api_name'] = os.environ['CBT_OPERATING_SYSTEM']
         caps['screen_resolution'] = os.environ['CBT_RESOLUTION']
     
