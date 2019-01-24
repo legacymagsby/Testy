@@ -31,7 +31,7 @@ class SeleniumCBT(unittest.TestCase):
     def test_CBT(self):
             self.driver.maximize_window()
             #self.driver.get("http://google.com")
-            self.driver.get("http://10.14.1.18:3000/")
+            self.driver.get("http://10.0.0.11:3000/")
             print("The window size is", self.driver.get_window_size()) #the window size    
             print("the title is",self.driver.title)
             self.driver.quit()
