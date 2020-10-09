@@ -15,10 +15,14 @@ class SeleniumCBT(unittest.TestCase):
         self.hash = None
         self.testId = None
         caps = {}
+        caps['name'] = 'Azure Pipelines Example'
+        caps['browserName'] = 'Chrome'
+        caps['version'] = '84'
+        caps['platform'] = 'Windows 10'
+        caps['screenResolution'] = '1366x768'
+        caps['username'] = self.username
+        caps['password'] = self.authkey
         caps['record_video'] = 'true'
-        caps['browser_api_name'] = os.environ['CBT_BROWSER']
-        caps['os_api_name'] = os.environ['CBT_OPERATING_SYSTEM']
-        caps['screen_resolution'] = os.environ['CBT_RESOLUTION']
     
 
         try:
