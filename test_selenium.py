@@ -8,7 +8,7 @@ class SeleniumCBT(unittest.TestCase):
     def setUp(self):
 
         self.username = os.environ['CBT_USERNAME']
-        self.authkey = os.environ['CBT_APIKEY']
+        self.authkey = os.environ['CBT_AUTHKEY']
         self.api_session = requests.Session()
         self.api_session.auth = (self.username,self.authkey)
         self.test_result = None
