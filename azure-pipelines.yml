@@ -35,6 +35,6 @@ steps:
     pytest
   displayName: 'pytest'
   
-- run: |
+- script: |
     python test.py
   displayName: 'Run Tests'
