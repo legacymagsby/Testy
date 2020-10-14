@@ -36,5 +36,5 @@ steps:
   displayName: 'pytest'
   
 - script: |
-    python test.py
+    python test_selenium.py
   displayName: 'Run Tests'
