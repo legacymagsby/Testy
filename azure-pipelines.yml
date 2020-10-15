@@ -21,14 +21,8 @@ strategy:
 
 steps:
 - powershell: |
-
-  env:
-    CBT_USERNAME: $(CBT_USERNAME) # the recommended way to map to an env variable
-    CBT_AUTHKEY: $(CBT_AUTHKEY)
-- bash: |
-  env:
-    CBT_USERNAME: $(CBT_USERNAME) # the recommended way to map to an env variable
-    CBT_AUTHKEY: $(CBT_AUTHKEY)
+   Write-Host ("##vso[task.setvariable variable=CBT_USERNAME]$($env:CBT_USERNAME)")
+   Write-Host ("##vso[task.setvariable variable=CBT_AUTHKEY]$($env:CBT_AUTHKEY)")
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
